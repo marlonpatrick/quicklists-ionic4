@@ -1,0 +1,6 @@
+{
+  "appId": "info.marlonpatrick.quicklists",
+  "appName": "quicklists",
+  "bundledWebRuntime": false,
+  "webDir": "www"
+}

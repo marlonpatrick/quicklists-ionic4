@@ -1,9 +1,13 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { ChecklistPageModule } from './checklist/checklist/checklist.module';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', loadChildren: './home/home.module#HomePageModule' },
+  { path: '', redirectTo: '/checklists', pathMatch: 'full' },
+  { path: 'intro', loadChildren: './intro/intro.module#IntroPageModule' },
+  { path: 'checklists',
+    loadChildren: './checklist/checklist-collection/checklist-collection.module#ChecklistCollectionPageModule' },
+  { path: 'checklist/:id', loadChildren: './checklist/checklist/checklist.module#ChecklistPageModule' }
 ];
 
 @NgModule({
