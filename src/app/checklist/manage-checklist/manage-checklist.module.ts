@@ -5,12 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ChecklistCollectionPage } from './ui/checklist-collection.page';
+import { ManageChecklistPage } from './ui/manage-checklist.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: ChecklistCollectionPage
+    component: ManageChecklistPage
   }
 ];
 
@@ -21,6 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [ChecklistCollectionPage]
+  declarations: [ManageChecklistPage]
 })
-export class ChecklistCollectionPageModule {}
+export class ManageChecklistPageModule {}

@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ChecklistPageModule } from './checklist/checklist/checklist.module';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/checklists', pathMatch: 'full' },
+  { path: '', redirectTo: '/manage-checklist-collection', pathMatch: 'full' },
   { path: 'intro', loadChildren: './intro/intro.module#IntroPageModule' },
-  { path: 'checklists',
-    loadChildren: './checklist/checklist-collection/checklist-collection.module#ChecklistCollectionPageModule' },
-  { path: 'checklist/:id', loadChildren: './checklist/checklist/checklist.module#ChecklistPageModule' }
+  { path: 'manage-checklist-collection',
+    loadChildren: './checklist/manage-checklist-collection/manage-checklist-collection.module#ManageChecklistCollectionPageModule' },
+  { path: 'manage-checklist/:id', loadChildren: './checklist/manage-checklist/manage-checklist.module#ManageChecklistPageModule' }
 ];
 
 @NgModule({
