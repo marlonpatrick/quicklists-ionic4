@@ -13,7 +13,7 @@ export class CreateChecklistUseCase {
 
     const slug = SlugGenerator.generate(this.checklistDataService, data.name);
 
-    const checklist: Checklist = new Checklist(slug, data.name);
+    const checklist: Checklist = Checklist.create(slug, data.name);
 
     this.checklistDataService.addChecklist(checklist);
   }

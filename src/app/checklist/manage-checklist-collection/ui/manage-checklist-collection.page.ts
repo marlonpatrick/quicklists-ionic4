@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController } from '@ionic/angular';
+import { AlertController, NavController } from '@ionic/angular';
 import { CreateChecklistUseCase } from '../domain/create-checklist.use-case';
 import { RemoveChecklistUseCase } from '../domain/remove-checklist.use-case';
 import { RenameChecklistUseCase } from '../domain/rename-checklist.use-case';
 import { ChecklistDataService } from '../../shared/domain/checklist-data.service';
 import { Checklist } from '../../shared/domain/checklist';
+import { Storage } from '@ionic/storage';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-manage-checklist-collection',
@@ -22,11 +24,6 @@ export class ManageChecklistCollectionPage implements OnInit {
     private alertCtrl: AlertController) { }
 
   ngOnInit() {
-
-  }
-
-  stringify(checklist) {
-    return JSON.stringify(checklist);
   }
 
   addChecklist() {

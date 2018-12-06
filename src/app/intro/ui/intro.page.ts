@@ -10,6 +10,7 @@ export class IntroPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log('onInit Intro');
   }
 
 }

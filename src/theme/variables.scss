@@ -1,6 +1,21 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
 
+ion-content {
+
+  --ion-background-color: #32db64;
+
+  ion-item-sliding {
+
+    margin: 5px;
+    width: auto; //without this, margin-right doesn't work.
+
+    ion-item {
+      --background: #fff;	
+    }  
+  }
+}
+
 /** Ionic CSS Variables **/
 :root {
   /** primary **/

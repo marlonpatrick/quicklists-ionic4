@@ -8,13 +8,16 @@ export class Checklist {
 
     private _items: ChecklistItem[];
 
-    constructor(id?: string, title?: string) {
-        if (id && title) {
-            this._id = id;
-            this._title = title;
-        }
-
+    constructor() {
         this._items = [];
+    }
+
+    public static create(id: string, title: string): Checklist {
+        const checkListObj = new Checklist();
+        checkListObj.id = id;
+        checkListObj.title = title;
+
+        return checkListObj;
     }
 
     public static fromJSON(jsonData): Checklist {

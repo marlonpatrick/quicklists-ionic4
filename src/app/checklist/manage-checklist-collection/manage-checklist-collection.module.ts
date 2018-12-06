@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { ManageChecklistCollectionPage } from './ui/manage-checklist-collection.page';
 import { ManageChecklistCollectionResolver } from './ui/resolvers/manage-checklist-collection.resolver';
+import { ManageChecklistCollectionGuard } from './ui/guards/manage-checklist-collection.guard';
 
 const routes: Routes = [
   {

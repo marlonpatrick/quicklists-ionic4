@@ -67,18 +67,12 @@ export class ChecklistDataService {
 
       } else {
 
-        console.log('loading...');
-
         this.storage.get('checklists')
           .then((checklists: Array<any>) => {
 
             if (checklists) {
-              checklists.map(jsonData => Checklist.fromJSON(jsonData))
-                .forEach(checklistObj => this._checklists.push(checklistObj));
+                this._checklists = checklists.map(jsonData => Checklist.fromJSON(jsonData));
             }
-
-            console.log('loaded:');
-            console.log(this._checklists);
 
             this.loaded = true;
             resolve(true);
